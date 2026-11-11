@@ -8,14 +8,17 @@
 
     <LinearLayout
         android:layout_width="411dp"
-        android:layout_height="0dp"
+        android:layout_height="730dp"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         tools:layout_editor_absoluteX="0dp">
 
 
@@ -23,7 +26,7 @@
             android:id="@+id/txtTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="150dp"
 
             android:fontFamily="@font/nunito_extrabold"
             android:text="@string/txt_resumen"
@@ -36,17 +39,29 @@
             android:id="@+id/txtResumen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+
             android:fontFamily="@font/nunito_bold"
-            android:textAlignment="center"
             android:textColor="@color/charcoal"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
              />
 
         <Button
             android:id="@+id/btnVolver"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:fontFamily="@font/nunito_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/navy"
+
             android:text="@string/btn_volver" />
 
 

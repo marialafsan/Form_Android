@@ -6,8 +6,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class SecondaryActivity : AppCompatActivity() {
 
@@ -35,7 +33,7 @@ class SecondaryActivity : AppCompatActivity() {
 
         val resumen = """
             
-            Datos del alumno:
+            Datos del alumno
             
             Nombre: $nombre
             Edad: $edad

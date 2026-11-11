@@ -82,10 +82,10 @@ class MainActivity : AppCompatActivity() {
 
             var tecnologias = ""
             if (cbJava.isChecked) {
-                tecnologias += "\n" + cbJava.text.toString() + "\n"
+                tecnologias += cbJava.text.toString() + " "
             }
             if (cbKotlin.isChecked) {
-                tecnologias += "\n" + cbKotlin.text.toString() + "\n"
+                tecnologias += cbKotlin.text.toString() + " "
             }
             if (tecnologias.isEmpty()) {
                 Toast.makeText(this, "Selecciona al menos una tecnología", Toast.LENGTH_SHORT).show()
