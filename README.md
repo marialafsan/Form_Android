@@ -1,4 +1,4 @@
-# RegistroApp
+# Form Android
 
 Android registration app built with **Kotlin** in **Android Studio** with the use of **XML**
 
