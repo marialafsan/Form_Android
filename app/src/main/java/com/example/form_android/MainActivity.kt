@@ -1,11 +1,11 @@
 package com.example.form_android
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         inicializarComponentes()
+        configurarEnvio()
+
     }
 
     private fun inicializarComponentes() {
@@ -66,23 +68,24 @@ class MainActivity : AppCompatActivity() {
             /* Validación Edad */
 
             val edadString = etEdad.text.toString().trim()
+            var edad: Int? = null
 
             if (edadString.isEmpty() || edadString.toIntOrNull() == null) {
                 etEdad.error = "Introduce una edad válida"
                 etEdad.requestFocus()
                 return@setOnClickListener
             } else {
-                val edad = edadString.toIntOrNull()
+                edad = edadString.toIntOrNull()
             }
 
             /* Validación Tecnologías */
 
             var tecnologias = ""
             if (cbJava.isChecked) {
-                tecnologias += cbJava.text.toString() + "\n"
+                tecnologias += "\n" + cbJava.text.toString() + "\n"
             }
             if (cbKotlin.isChecked) {
-                tecnologias += cbKotlin.text.toString() + "\n"
+                tecnologias += "\n" + cbKotlin.text.toString() + "\n"
             }
             if (tecnologias.isEmpty()) {
                 Toast.makeText(this, "Selecciona al menos una tecnología", Toast.LENGTH_SHORT).show()
@@ -91,13 +94,28 @@ class MainActivity : AppCompatActivity() {
 
             /* Validación Turno */
 
-            val selectedId = rgHora.checkedRadioButtonId
-            if (selectedId == -1) {
+            val turnoId = rgHora.checkedRadioButtonId
+            var turno = ""
+            if (turnoId == -1) {
                 Toast.makeText(this, "Selecciona un turno", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
+            } else if (turnoId == R.id.rbMañana) {
+                turno = "Mañana"
+            } else if (turnoId == R.id.rbTarde) {
+                turno = "Tarde"
             }
 
-            //
+            // INTENT
+
+            val intent = Intent(this, SecondaryActivity::class.java)
+
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("edad", edad)
+            intent.putExtra("tecnologias", tecnologias)
+            intent.putExtra("turno", turno)
+
+            startActivity(intent)
+
 
         }
 

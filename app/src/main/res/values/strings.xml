@@ -14,5 +14,6 @@
     <string name="txt_turno">Turno:</string>
 
     <string name="txt_resumen">Resumen:</string>
+    <string name="btn_volver">Volver</string>
 
 </resources>
