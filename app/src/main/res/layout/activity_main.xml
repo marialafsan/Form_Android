@@ -9,11 +9,12 @@
 
     <LinearLayout
         android:layout_width="411dp"
-        android:layout_height="729dp"
+        android:layout_height="wrap_content"
+
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,10 +24,8 @@
             android:id="@+id/txtTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
 
             android:fontFamily="@font/nunito_extrabold"
-            android:inputType="text"
             android:text="@string/titulo"
             android:textAlignment="center"
             android:textColor="@color/navy"
@@ -160,14 +159,29 @@
                 android:layout_marginStart="110dp"
                 android:layout_marginEnd="100dp"
 
-                android:layout_marginBottom="40dp"
                 android:fontFamily="@font/nunito_bold"
                 android:text="@string/rg_hora2"
                 android:textColor="@color/charcoal"
 
                 android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+
+                android:fontFamily="@font/nunito_extrabold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/navy"
+                android:textSize="16sp"
+
+                android:text="@string/btn_envio" />
+
         </RadioGroup>
+
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
