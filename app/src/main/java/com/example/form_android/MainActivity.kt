@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
             /* Validación Edad */
 
             val edadString = etEdad.text.toString().trim()
-            var edad: Int? = 0
+            var edad: Int? = null
 
             if (edadString.isEmpty() || edadString.toIntOrNull() == null) {
                 etEdad.error = "Introduce una edad válida"
@@ -82,10 +82,10 @@ class MainActivity : AppCompatActivity() {
 
             var tecnologias = ""
             if (cbJava.isChecked) {
-                tecnologias += cbJava.text.toString() + "\n"
+                tecnologias += "\n" + cbJava.text.toString() + "\n"
             }
             if (cbKotlin.isChecked) {
-                tecnologias += cbKotlin.text.toString() + "\n"
+                tecnologias += "\n" + cbKotlin.text.toString() + "\n"
             }
             if (tecnologias.isEmpty()) {
                 Toast.makeText(this, "Selecciona al menos una tecnología", Toast.LENGTH_SHORT).show()
@@ -94,10 +94,15 @@ class MainActivity : AppCompatActivity() {
 
             /* Validación Turno */
 
-            val turno = rgHora.checkedRadioButtonId
-            if (turno == -1) {
+            val turnoId = rgHora.checkedRadioButtonId
+            var turno = ""
+            if (turnoId == -1) {
                 Toast.makeText(this, "Selecciona un turno", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
+            } else if (turnoId == R.id.rbMañana) {
+                turno = "Mañana"
+            } else if (turnoId == R.id.rbTarde) {
+                turno = "Tarde"
             }
 
             // INTENT
@@ -111,7 +116,6 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
 
-            finish()
 
         }
 

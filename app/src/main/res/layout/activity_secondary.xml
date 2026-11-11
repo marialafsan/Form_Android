@@ -20,7 +20,7 @@
 
 
         <TextView
-            android:id="@+id/txtResumen"
+            android:id="@+id/txtTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
@@ -32,11 +32,22 @@
             android:textSize="28sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/txtResumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:textAlignment="center"
+            android:textColor="@color/charcoal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+             />
+
         <Button
             android:id="@+id/btnVolver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btn_volver" />
 
 
     </LinearLayout>

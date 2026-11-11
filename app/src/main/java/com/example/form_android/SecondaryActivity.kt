@@ -1,13 +1,9 @@
 package com.example.form_android
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.RadioGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,13 +18,8 @@ class SecondaryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_secondary)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
         recuperarDatos()
     }
 
@@ -40,7 +31,7 @@ class SecondaryActivity : AppCompatActivity() {
         val nombre = intent.getStringExtra("nombre")
         val edad = intent.getIntExtra("edad", 0)
         val tecnologias = intent.getStringExtra("tecnologias")
-        val turno = intent.getIntExtra("turno", 0)
+        val turno = intent.getStringExtra("turno")
 
         val resumen = """
             
