@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="729dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+
+            android:fontFamily="@font/nunito_extrabold"
+            android:inputType="text"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="@string/txt_nombre"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:ems="10"
+
+            android:fontFamily="@font/nunito"
+            android:hint="@string/et_nombre"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="@string/txt_edad"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:ems="10"
+
+            android:fontFamily="@font/nunito"
+            android:hint="@string/et_edad"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtTech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="@string/txt_tech"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/cbJava"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/cb_java"
+            android:textColor="@color/charcoal"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/cbKotlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginEnd="100dp"
+
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/cb_kotlin"
+            android:textColor="@color/charcoal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtTurno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="@string/txt_turno"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rgHora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rbMañana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginEnd="100dp"
+
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/rg_hora"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbTarde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginEnd="100dp"
+
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/rg_hora2"
+                android:textColor="@color/charcoal"
+
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

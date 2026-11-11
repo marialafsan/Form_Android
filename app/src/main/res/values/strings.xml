@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="titulo">Registro de usuario</string>
+    <string name="txt_nombre">Nombre:</string>
+    <string name="txt_edad">Edad:</string>
+    <string name="et_nombre">Introduce tu nombre</string>
+    <string name="et_edad">Introduce tu edad</string>">
+    <string name="cb_java">Java</string>
+    <string name="cb_kotlin">Kotlin</string>
+    <string name="rg_hora">Mañana</string>
+    <string name="rg_hora2">Tarde</string>
+    <string name="btn_envio">Enviar</string>
+    <string name="txt_tech">Tecnologías Usadas:</string>
+    <string name="txt_turno">Turno:</string>
+
+    <string name="txt_resumen">Resumen:</string>
+
+</resources>
