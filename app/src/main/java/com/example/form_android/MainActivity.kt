@@ -1,11 +1,11 @@
 package com.example.form_android
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         inicializarComponentes()
+        configurarEnvio()
+
     }
 
     private fun inicializarComponentes() {
@@ -66,13 +68,14 @@ class MainActivity : AppCompatActivity() {
             /* Validación Edad */
 
             val edadString = etEdad.text.toString().trim()
+            var edad: Int? = 0
 
             if (edadString.isEmpty() || edadString.toIntOrNull() == null) {
                 etEdad.error = "Introduce una edad válida"
                 etEdad.requestFocus()
                 return@setOnClickListener
             } else {
-                val edad = edadString.toIntOrNull()
+                edad = edadString.toIntOrNull()
             }
 
             /* Validación Tecnologías */
@@ -91,13 +94,24 @@ class MainActivity : AppCompatActivity() {
 
             /* Validación Turno */
 
-            val selectedId = rgHora.checkedRadioButtonId
-            if (selectedId == -1) {
+            val turno = rgHora.checkedRadioButtonId
+            if (turno == -1) {
                 Toast.makeText(this, "Selecciona un turno", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            //
+            // INTENT
+
+            val intent = Intent(this, SecondaryActivity::class.java)
+
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("edad", edad)
+            intent.putExtra("tecnologias", tecnologias)
+            intent.putExtra("turno", turno)
+
+            startActivity(intent)
+
+            finish()
 
         }
 
